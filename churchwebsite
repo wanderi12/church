@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Francis Xavier Catholic Church</title>
+    <link rel="stylesheet" href="churchwebsite.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#sacraments">Sacraments</a></li>
+                <li><a href="#mass-schedules">Mass Schedules</a></li>
+                <li><a href="#prayer-requests">Prayer Requests</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#prayers">Prayers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h1>About Us</h1>
+            <p>Welcome to St. Francis Xavier Catholic Church located in Naivasha. We are a community of faith dedicated to serving God and our neighbors.</p>
+        </section>
+        <section id="sacraments">
+            <h1>Sacraments</h1>
+            <p>Information about sacraments such as Baptism, Confirmation, Eucharist, Reconciliation, Anointing of the Sick, Marriage, and Holy Orders.</p>
+        </section>
+        <section id="mass-schedules">
+            <h1>Mass Schedules</h1>
+            <p>Details of our weekly Mass schedules including times and special services.</p>
+        </section>
+        <section id="prayer-requests">
+            <h1>Prayer Requests</h1>
+            <form id="prayer-request-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="request">Prayer Request:</label>
+                <textarea id="request" name="request" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section id="contact">
+            <h1>Contact Us</h1>
+            <p>Contact information including address, phone number, and email.</p>
+        </section>
+        <section id="prayers">
+            <h1>Prayers</h1>
+            <p>Common prayers and devotions for personal and communal use.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 St. Francis Xavier Catholic Church. All rights reserved.</p>
+    </footer>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+    const prayerRequestForm = document.getElementById('prayer-request-form');
+
+    prayerRequestForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const request = document.getElementById('request').value;
+
+        console.log(`Prayer Request Submitted: Name: ${name}, Email: ${email}, Request: ${request}`);
+
+        alert('Thank you for your prayer request. We will keep you in our prayers.');
+        
+        prayerRequestForm.reset();
+    });
+});
+</script>
+</body>
+</html>
